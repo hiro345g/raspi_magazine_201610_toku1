@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>mjpeg_server</title>
+</head>
+<body>
+<div style="background-color:#fff; margin:10px; padding: 5px;">
+    カメラ<br/>
+    <img src="/cam.mjpg"/><br/>
+</div>
+<div style="background-color:#ccc; margin:10px; padding: 5px;">
+    サーボモーター<br/>
+    <form name="form_servo">
+        <select id="select_servo" style="width: 60px;">
+            <option value="" selected> -</option>
+            <option value="/servo/0">0</option>
+            <option value="/servo/30">30</option>
+            <option value="/servo/60">60</option>
+            <option value="/servo/90">90</option>
+            <option value="/servo/120">120</option>
+            <option value="/servo/150">150</option>
+            <option value="/servo/180">180</option>
+        </select>
+    </form>
+</div>
+<div style="background-color:#fff; margin:10px; padding: 5px;">
+    キャプチャ画像<br/>
+    <img id="100mm_photo" src="/static/100mm_photo.jpg"/><br/>
+    <input type="button" onclick="reflesh_img()" value="表示"/>
+</div>
+<div style="background-color:#ccc; margin:10px; padding: 5px;">
+    サーバー<br/>
+    <input type="button" value="停止" onclick="location.href='/shutdown'">
+</div>
+<script src="./libs/js/jquery-3.1.0.min.js"></script>
+<script src="./libs/js/app_a3.js"></script>
+</body>
+</html>

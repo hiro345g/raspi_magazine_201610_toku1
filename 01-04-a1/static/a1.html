@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LEDコントローラ</title>
+</head>
+<body>
+<div>Status:<span id='status'></span></div>
+<div style="background-color:#ccc; margin:10px; padding: 5px;">
+    単体LED<br>
+<form>
+    <input type="button" id="led_on" value="点灯">
+    <input type="button" id="led_off" value="消灯">
+</form>
+</div>
+
+<div style="background-color:#fff; margin:10px; padding: 5px;">
+    3色信号LED<br>
+<form>
+    <label><input type="radio" name="led_checkbox" value="/led_list/0">消灯</label>
+    <label style="color:red; font-weight: bold;"><input type="radio" name="led_checkbox" value="/led_list/1">赤色LED</label>
+    <label style="color:#ffcc00; font-weight: bold;"><input type="radio" name="led_checkbox" value="/led_list/2">黄色LED</label>
+    <label style="color:green; font-weight: bold;"><input type="radio" name="led_checkbox" value="/led_list/3">緑色LED</label>
+</form>
+</div>
+
+<div style="background-color:#ccc; margin:10px; padding: 5px;">
+    LEDマトリクス<br>
+    <p>
+    <img id="matrix0" src="./matrix0.png"/>
+    <img id="matrix1" src="./matrix1.png"/>
+    <img id="matrix2" src="./matrix2.png"/>
+    <img id="matrix3" src="./matrix3.png"/>
+    </p>
+</div>
+
+<div style="background-color:#fff; margin:10px; padding: 5px;">
+<form name="form_pattern">
+  <select name="select_pattern" id="pattern" style="width: 180px;">
+    <option value="" selected> - </option>
+    <option value="/led_pattern/0">消灯</option>
+    <option value="/led_pattern/1">パターン1</option>
+    <option value="/led_pattern/2">パターン2</option>
+    <option value="/led_pattern/3">パターン3</option>
+  </select>
+</form>
+</div>
+<div style="background-color:#ccc; margin:10px; padding: 5px;">
+    <input type="button" value="停止" onclick="location.href='/shutdown'">
+</div>
+<script src="./libs/js/jquery-3.1.0.min.js"></script>
+<script src="./libs/js/app_a1.js"></script>
+</body>
+</html>

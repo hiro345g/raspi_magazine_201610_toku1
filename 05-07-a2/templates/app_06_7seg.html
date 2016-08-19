@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>toku1/06</title>
+</head>
+<body>
+{% if seven_seg_number %}
+指定されたのは {{ seven_seg_number }}
+{% else %}
+消灯
+{% endif %}
+
+<form method="POST" action="/seven_led/">
+    <p>
+        <input type="text" name="seven_seg_number" size="4" maxlength="4">
+    </p>
+    <p><input type="submit" value="送信"></p>
+</form>
+<form method="POST" action="/shutdown">
+    <p>
+        <label><input type="submit" value="シャットダウン"></label>
+    </p>
+</form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>toku1/02a</title>
+</head>
+<body>
+<div>Status:<span id='status'></span></div>
+<form>
+    <p><label><input type="radio" name="led_checkbox" value="/led_list/0" />消灯</label></p>
+    <p><label><input type="radio" name="led_checkbox" value="/led_list/1" />LED1 点灯</label></p>
+    <p><label><input type="radio" name="led_checkbox" value="/led_list/2" />LED2 点灯</label></p>
+    <p><label><input type="radio" name="led_checkbox" value="/led_list/3" />LED3 点灯</label></p>
+</form>
+<p><input type="button" value="停止" onclick="location.href='/shutdown'"></p>
+
+<script src="./libs/js/jquery-3.1.0.min.js"></script>
+<script src="./libs/js/app_02a.js"></script>
+</body>
+</html>

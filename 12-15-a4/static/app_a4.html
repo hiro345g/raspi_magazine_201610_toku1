@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>グラフ表示アプリ（toku1/app_a4）</title>
+</head>
+<body>
+<h2>コントローラ</h2>
+<div>
+    <form id="form_datalogger_shutdown" action="/running/0" method="POST">
+        <input type="submit" id="datalogger_shutdown" value="ロガー停止"/>
+    </form>
+    <br>
+    <form id="form_flask_shutdown" action="/shutdown" method="POST">
+        <input type="submit" id="flask_shutdown" value="flaskアプリ停止"/>
+    </form>
+</div>
+<h2>グラフ</h2>
+<h3>気圧・湿度・気温</h3>
+<div>
+    <img id="img_air_pressure" src="/static/air_pressure.png" style="width:320px;"/>
+    <img id="img_humidity" src="/static/humidity.png" style="width:320px;"/>
+    <img id="img_temperature" src="/static/temperature.png" style="width:320px;" />
+</div>
+<div>
+    <div>最近の気圧（取得結果：<span id="status_air_pressure"></span>）</div>
+    <div id="img_air_pressure_list"></div>
+    <div>最近の湿度（取得結果：<span id="status_humidity"></span>）</div>
+    <div id="img_humidity_list"></div>
+    <div>最近の温度（取得結果：<span id="status_temperature"></span>）</div>
+    <div id="img_temperature_list"></div>
+</div>
+<script type='text/javascript' src='/static/libs/js/jquery-3.1.0.min.js'></script>
+<script type='text/javascript' src='/static/libs/js/app_a4.js'></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>タイマー（toku1/a2）</title>
+</head>
+<body>
+<h2>タイマー</h2>
+<form method="POST" action="/timer_start/">
+    <p>
+        <input type="text" name="seconds" size="4" maxlength="4">　<input type="submit" value="開始">
+    </p>
+</form>
+<form method="POST" action="/shutdown">
+    <p>
+        <label><input type="submit" value="シャットダウン"></label>
+    </p>
+</form>
+</body>
+</html>

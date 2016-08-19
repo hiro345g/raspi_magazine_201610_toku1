@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>toku1/03</title>
+</head>
+<body>
+<form id="form_slider">
+    <p><label><input type="range" id="running" value="1" min="0" max="1" step="1">RUNNING</label></p>
+    <p><label><input type="range" id="LED1" value="0" min="0" max="100" step="1">LED1</label></p>
+    <p><label><input type="range" id="LED2" value="0" min="0" max="100" step="1">LED2</label></p>
+    <p><label><input type="range" id="LED3" value="0" min="0" max="100" step="1">LED3</label></p>
+</form>
+<p><input type="button" value="停止" onclick="location.href='/shutdown'"></p>
+
+<script src="./libs/js/jquery-3.1.0.min.js"></script>
+<script src="./libs/js/app_03.js"></script>
+</body>
+</html>

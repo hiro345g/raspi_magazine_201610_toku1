@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>toku1/app_13</title>
+    <style>
+      table, tr, th, td {border: 1px solid #b9b9b9;}
+    </style>
+</head>
+<body>
+<h1>bme280 (SQLAlchemy)</h1>
+<h2>データ (HTML生成)</h2>
+<div>
+    <form>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>created_datetime</th>
+                <th>value</th>
+            </tr>
+            {%- for entry in air_pressure_list %}
+            <tr>
+                <td>{{ entry['id'] }}</td>
+                <td>{{ entry['created_datetime'] }}</td>
+                <td>{{ entry['value'] }}</td>
+            </tr>
+            {%- endfor %}
+        </table>
+    </form>
+</div>
+<h2>コントローラ</h2>
+<div>
+    <form id="form_flask_shutdown" action="/shutdown" method="POST">
+        <input type="submit" id="flask_shutdown" value="flaskアプリ停止"/>
+    </form>
+</div>
+
+
+<h2>データ (jQuery版：XMLHttpRequest+JSON)</h2>
+<div>
+    <p>気圧
+    <table id="table_air_pressure_entries"></table>
+    </p>
+    <button id='get_entries' type='button'>データ表示</button>
+</div>
+
+<script type='text/javascript' src='/static/libs/js/jquery-3.1.0.min.js'></script>
+<script type='text/javascript' src='/static/libs/js/bme280_app.js'></script>
+</body>
+</html>
